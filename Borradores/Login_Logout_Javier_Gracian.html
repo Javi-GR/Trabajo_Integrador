@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <!-- 
+
+    Realizado por: Javier Gracián Rodríguez
+    Curso: 1ºDAM CENEC
+    Asignatura: Lenguaje de Marcas
+    Profesor: Carlos Boni Niklison
+    Fecha de entrega: 17/01/2021
+    
+  -->
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <script>
+    function miValidacion(){
+      window.alert("Gracias por enviar sus datos.")
+    }
+  </script>
+
+  <body>
+    <h1>Validación de formularios</h1>
+    <form class="formu" action="12-ene-formulario" method="post" required>
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" name="nom" id="nombre" maxlength="30" required><br>
+      <label for="apellido">Apellido:</label><br>
+      <input type="text" name="ape" id="apellido" requiered><br>
+      <label for="edad">Edad:</label><br>
+      <input type="number" name="ed" id="edad" required><br>
+      <label for="color">Color preferido:</label><br>
+      <input type="color" id="color" name="col" required><br>
+      <label for="date">Fecha de Nacimiento:</label><br>
+      <input type="date" name="fch" id="fecha" required><br>
+      <input type="submit" onclick="miValidacion()" value="Enviar" id="enviar">
+      
+    </form>
+  </body>
+</html>
