@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    font-family: 'Poppins', sans-serif;
+}
+
+.landing{
+    min-height: 100vh;
+    background: url('./pexels-trust-design.jpg');
+    background-size: cover;
+    padding: 0rem, 5rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links li{
+    padding-right: 10rem;
+    font-size: 1.2rem;
+    color: #f2f7ff
+}
+#logo{
+    padding-left: 5rem;
+    color: #f2f7ff;
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.texto-grande{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: 'Yusei Magic', sans-serif;
+    color: #f2f7ff;
+}
+.intro{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: fleX;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    background: rgb(36, 36, 36);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: fleX;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+}
+.intro-texto{
+    color:  #f2f7ff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+.oculto{
+    background-color: black;
+    overflow: hidden;
+}
+
+.oculto span{
+    transform: translateY(100%);
+    display: inline-block;
+}
