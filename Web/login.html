@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!--
+Tema: Web Storage - localstorage y sessionstorage 
+alumno: Javier Gracián Rodríguez
+fecha: 27 enero
+-->
+
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./page.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <header>
+    <style>
+      .form{
+        position: absolute;
+        top: 31%;
+        left: 38%;
+      }
+      a{
+        text-decoration: none;
+        color: #3b3b3b;
+      }
+      .format{
+        background-color: bisque;
+        border: 2px solid bisque;
+        padding: 18px;
+        border-radius: 15px;
+        display: block;
+        text-align: center;
+        line-height: 3em;
+      }
+    </style>
+  </header>
+
+  <div id="counter"></div>
+ 
+
+  <div class="form">
+    <div class="format">
+    <h1>Ejemplo Session Storage</h1>
+    <a href="./inicio.html">Volver a página principal</a><br>
+    <form name="miFormulario" onSubmit="return guardar()">
+      <label for="usuario">Usuario:</label><br>
+      <input type="text" id="usuario" name="usuario" maxlength="10" required><br>
+      <input type="submit" value="Guardar">
+    </form>
+  </div>
+  </div>
+  <!-- creamos un elemento vacío para luego poner allí el resultado
+      de nuestro script -->
+  <br />
+  <div id="mensaje"></div>
+  
+</body>
+
+<footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
+
+</html>

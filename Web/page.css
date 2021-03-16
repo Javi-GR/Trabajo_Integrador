@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pag-inicio{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 0rem, 5rem;
+    background: white;
+    z-index: 2;
+}
+.redes{
+  position: fixed;
+  top: 20%;
+  left: 3%;
+}
+.contenedor-grid {
+    position: fixed;
+    top: 25%;
+    left: 3%;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    background-color: #b4b4b4;
+    border-radius: 4%;
+    padding: 5px;
+  }
+  .grid-item1 {
+    border-radius: 10%;
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://image.flaticon.com/icons/png/512/38/38669.png);
+    background-size: cover;
+
+  }
+  .grid-item2 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Twitch_Glitch_Logo_Black.svg/878px-Twitch_Glitch_Logo_Black.svg.png);
+    background-size: cover;
+
+  }
+  .grid-item3 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://image.flaticon.com/icons/png/512/23/23681.png);
+    background-size: cover;
+
+  }
+  .grid-item4 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://image.flaticon.com/icons/png/512/24/24193.png);
+    background-size: cover;
+
+  }
+  .grid-item5 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://i.pinimg.com/originals/37/17/bd/3717bd3e3e6f2c23a8635eb76c37140c.png);
+    background-size: cover;
+
+  }
+  .grid-item6 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://image.flaticon.com/icons/png/512/20/20673.png);
+    background-size: cover;
+
+  }
+  .grid-item7 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://markfom.cl/wp-content/uploads/2020/04/instagram.png);
+    background-size: cover;
+
+  }
+  .grid-item8 {
+    margin: 5px;
+    padding: 20px;
+    background-image: url(https://image.flaticon.com/icons/png/512/25/25231.png);
+    background-size: cover;
+
+  } 
+
+nav{
+  position: fixed;
+  top:0%;
+  right:3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li{
+    padding-right: 10rem;
+    font-size: 1.2rem;
+    color: #3b3b3b;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #3b3b3b;
+}
+
+.links-chulos::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3b3b3b;
+    transition: width .3s;
+}
+
+.links-chulos:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+#ayuda{
+    position: absolute;
+    top: 37%;
+    right: 37%;
+    font-size: 1em;
+    font-weight: lighter;
+    color:#3b3b3b;
+}
+
+#descripcion-inicio{
+position: absolute;
+top: 25%;
+margin: 20%;
+}
+
+#selected{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #3b3b3b;
+}
+
+#logo{
+    position: fixed;
+    top:2%;
+    left: 0%;
+    padding-left: 5rem;
+    color: #3b3b3b;
+    font-size: 2rem;
+}
+
+.bloque-texto-central{
+    float: left;
+    overflow: hidden;
+}
+
+.bloque-texto-central .texto-central{
+    border: none;
+    outline: none;
+    color: #3b3b3b;
+    padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.bloque-texto-central:hover{
+    background-color: rgb(255, 236, 221);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 42%;
+    left: 37%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 26%;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+.texto-central{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    color: #3b3b3b;
+}
+.bloque-texto-central:hover .dropdown-content{
+    display: block;
+}
+#migasdepan{
+  position:absolute;
+  top:10%;
+  height: 50px;
+  width: 100%;;
+  background:#9c9c9c;
+}
+.formato-contador{
+  background: #9c9c9c;
+  padding: 5px;
+  border-radius: 5px;
+  position: fixed;
+  display:inline-flex;
+  bottom: 5%;
+  left:42%;
+  font-size: 12px;
+}
+
+.pie-pagina{
+  position: fixed;
+  bottom:0%;
+  width:100%;
+  background: #c7c7c7;
+  text-align: center;
+}
+.formcaja{
+  background: #b4b4b4;
+  padding:20px;
+  border-radius: 2%;;
+  position:absolute;
+  top: 45%;
+  right:43%;
+}
+#mensaje{
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    color: #3b3b3b;
+}
+#proyectos-contenedor{
+  position:absolute;
+  overflow:scroll;
+  max-width: 75%;
+  max-height: 50%;
+  top:40%;
+  right:18%;
+}
+.img-haggling {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto-proyectos{
+  position: relative;
+  text-align: center;
+}
+.img-gea{
+  display:flex;
+  padding-left: 40%;
+}
+#video{
+  background: #b4b4b4;
+  padding:10px;
+  border-radius: 10px;
+  position: absolute;
+  top:17%;
+  right:2%;
+}
+
+/* A falta de aplicar css al login*/

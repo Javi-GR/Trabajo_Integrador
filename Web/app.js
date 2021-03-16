@@ -1,3 +1,5 @@
+/*Anima el timeline de las letras iniciales*/
+
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
 tl.to('.texto', { y: "0%", duration: 1, stagger: 0.25 });

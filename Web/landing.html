@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+Asignatura: Lenguaje de Marcas
+Tema: CV personal
+Alumno: Javier Gracián Rodríguez
+Última modificación: 14 de marzo
+Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen y un footer
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="anim-intro.css">
+    <link rel="stylesheet" href="page.css">
+    <!--Fuentes de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts.js"></script>
+</head>
+<title>CV Javi Gracian</title>
+<!--Video de Youtube-->
+<div id="video">
+    <iframe width="430" height="215" src="https://www.youtube.com/embed/lxEZNFkfGPA" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    
+    </div>
+<body>
+    <div class="formato-contador">
+        <div>Número de clicks a enlaces dentro de mi web--></div>
+        <div id="counter"></div>
+    </div>
+
+        <section class="pag-inicio">
+            <nav>
+                <h1 id="logo">Javier Gracián</h1>
+                <ul class="nav-links">
+                    <li><a href = "./inicio.html" class="links-chulos" id="selected">Inicio</a></li>
+                    <li><a href = "./contact.html" class="links-chulos">Contacto</a></li>
+                    <li><a href = "./projects.html" class="links-chulos" >Proyectos</a></li>
+                    <!--Ejercicio login con session storage-->
+                    <li><a href="./login.html" class="links-chulos">Login</a></li>
+                    <div id="mensaje"></div>
+                </ul>
+            </nav>
+        </section>
+
+        <!--Display Grid (page.css)-->
+        <aside>
+            <div class="redes"><p>Encuéntrame en: </p></div>
+            <div class = "contenedor-grid">
+
+                <a href="https://www.linkedin.com/" target="_blank"><div class = "grid-item1"></div></a>
+                <a href="https://www.twitch.tv/" target="_blank"><div class = "grid-item2"></div></a>
+                <a href="https://twitter.com/" target="_blank"><div class = "grid-item3"></div></a>
+                <a href="https://www.pinterest.es/" target="_blank"><div class = "grid-item4"></div></a>
+                <a href="https://www.youtube.com/" target="_blank"><div class = "grid-item5"></div></a>
+                <a href="https://www.facebook.com/" target="_blank"><div class = "grid-item6"></div></a>
+                <a href="https://www.instagram.com/" target="_blank"><div class = "grid-item7"></div></a>
+                <a href="https://github.com/" target="_blank"><div class = "grid-item8"></div></a>
+
+            </div>
+        </aside>
+
+        <!--Dropdown del texto central -->
+            <div class="bloque-texto-central">
+                <button class="texto-central">Currículum 
+                </button>
+                <p id="ayuda">¿Ayuda?</p>
+                <div class="dropdown-content">
+                    <a href="#">Trabajos y articulos  de interes en [Proyectos]</a>
+                    <a href="#">Mas información en el apartado de contactos</a>
+                    <a href="#">O en mi correo (JaviGracian1998@gmail.com)</a>
+                </div>
+            </div>
+
+            
+
+            <main id="descripcion-inicio">
+                <article>
+                    <h3>¡Hola!, y lo primero, gracias por visitar mi página, en la que veréis 
+                        algunos proyectos personales (o que han quedado en el olvido) y quería compartir antes de que se perdiesen para siempre. 
+                        ¡Espero que os guste!<br> Yyyy... agarrate que viene texto de relleno y pruebas que he ido haciendo en la página. 
+                         </h3>
+                </article>
+            </main>
+            
+        
+            
+        <!--Animación al entrar en la página-->
+    <div class="intro">
+        <div class="intro-texto">
+            <h1 class="oculto">
+                <span class="texto">¡Hola!</span>
+            </h1>
+            <h1 class="oculto">
+                <span class="texto">Bienvenido a mi</span>
+            </h1>
+            <h1 class="oculto">
+                <span class="texto">Currículum</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+    <!--Introduzco GSAP, un CDN de javascript que facilita la animación de la página con funciones
+         como establecer una linea de tiempo e ir adaptando la animación al gusto-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous">
+        </script>
+    <script src="./app.js"></script>
+    <script>
+        document.getElementById("mensaje").innerHTML = sessionStorage.getItem("usuario");
+    </script>
+</body>
+<footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
+
+</html>

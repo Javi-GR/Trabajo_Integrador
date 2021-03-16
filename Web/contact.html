@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+Asignatura: Lenguaje de Marcas
+Tema: CV personal
+Alumno: Javier Gracián Rodríguez
+Última modificación: 30 de enero
+Comentarios: A falta de modificar textos e imágenes, primero establezco el diseño y layout de los 
+elementos de la página web, cuando haya quedado establecido se adaptaran los textos al formato que elija
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./page.css" />
+    <!--Fuentes de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+        <!--Script que recuerda el usuario-->
+    <script defer src="scripts.js"></script>
+</head>
+<title>Contacto</title>
+
+<body>
+
+    <div class="formato-contador">
+        <div>Número de clicks a enlaces dentro de mi web--></div>
+        <div id="counter"></div>
+    </div>
+ 
+    
+
+        <section class="pag-inicio">
+            <nav>
+                <h1 id="logo">Javier Gracián</h1>
+                <ul class="nav-links">
+                    <li><a href = "./inicio.html" class="links-chulos" >Inicio</a></li>
+                    <li><a href = "./contact.html" class="links-chulos" id="selected">Contacto</a></li>
+                    <li><a href = "./projects.html" class="links-chulos" >Proyectos</a></li>
+                    <!--Ejercicio login con session storage-->
+                    <li><a href="./login.html" class="links-chulos">Login</a></li>
+                    <div id="mensaje"></div>
+                </ul>
+            </nav>
+        </section>
+        <aside>
+            
+            <div class="redes"><p>Encuéntrame en: </p></div>
+            <div class = "contenedor-grid">
+
+                <a href="https://www.linkedin.com/" target="_blank"><div class = "grid-item1"></div></a>
+                <a href="https://www.twitch.tv/" target="_blank"><div class = "grid-item2"></div></a>
+                <a href="https://twitter.com/" target="_blank"><div class = "grid-item3"></div></a>
+                <a href="https://www.pinterest.es/" target="_blank"><div class = "grid-item4"></div></a>
+                <a href="https://www.youtube.com/" target="_blank"><div class = "grid-item5"></div></a>
+                <a href="https://www.facebook.com/" target="_blank"><div class = "grid-item6"></div></a>
+                <a href="https://www.instagram.com/" target="_blank"><div class = "grid-item7"></div></a>
+                <a href="https://github.com/" target="_blank"><div class = "grid-item8"></div></a>
+
+            </div>
+        </aside>
+
+            <h2 class="texto-central">Contacto</h2>
+        <div class = "formcaja">
+            <form action="./enviar.php" id="formulario">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombreform" name="nombreform"><br>
+                <label for="apellidos" >Apellidos:</label><br>
+                <input type="text" id="apellidosform" name="apellidosform"><br>
+                <label for="email" >Email:</label><br>
+                <input type="text" id="emailform" name="emailform"><br>
+                <label for="mensaje">Mándame un mensaje :D</label><br>
+                <textarea name="mensajeusr" id="mensajeusr" cols="23" rows="2"></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        
+        
+    
+    <script>
+        document.getElementById("mensaje").innerHTML = sessionStorage.getItem("usuario");
+    </script>
+</body>
+
+<footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
+
+</html>
