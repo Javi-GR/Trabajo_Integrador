@@ -1,4 +1,6 @@
-# SitiosWeb
- Trabajo Integrador CENEC
+# SitioWeb
+ Trabajo Integrador CENEC, Javier Gracián Rodríguez
 Currículum personal.
-Para ver la página web al completo, empezar desde index.html
+··*[Documentos para la creación de la web.] (../Trabajo_Integrador/DOCS)
+··*[Borradores](../Trabajo_Integrador/Borradores)
+··*[Web](../Trabajo_Integrador/Web)
