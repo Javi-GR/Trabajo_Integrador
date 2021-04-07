@@ -5,10 +5,4 @@
 ## Currículum personal.
 
 
-··* [Documentos para la creación de la web](../DOCS)
-
-
-··* [Borradores](../Borradores)
-
-
-··* [Web](../Web)
+[Borradores]: https://github.com/Javi-GR/Trabajo_Integrador/tree/main/Borradores
