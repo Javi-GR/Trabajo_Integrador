@@ -5,5 +5,6 @@
 ## Currículum personal.
 
 
-[Borradores]
-[Borradores]: https://github.com/Javi-GR/Trabajo_Integrador/tree/main/Borradores
+[Web].
+
+[Web]: https://javi-gr.github.io/Trabajo_Integrador/Web/
