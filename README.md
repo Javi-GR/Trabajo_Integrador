@@ -5,10 +5,10 @@
 ## Currículum personal.
 
 
-··*[Documentos para la creación de la web.] (../Trabajo_Integrador/DOCS)
+··* [Documentos para la creación de la web](../DOCS)
 
 
-··*[Borradores](../Trabajo_Integrador/Borradores)
+··* [Borradores](../Borradores)
 
 
-··*[Web](../Trabajo_Integrador/Web)
+··* [Web](../Web)
