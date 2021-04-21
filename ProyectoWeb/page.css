@@ -32,6 +32,15 @@ nav{
   justify-content: space-around;
   list-style: none;
 }
+
+.burger div{
+  width: 25px;
+  height: 4px;
+  background-color: #3b3b3b;
+  margin: 3px;
+  border-radius: 35%;
+}
+
 .presentacion{
   display: flex;
   width: 90%;
@@ -42,7 +51,7 @@ nav{
 }
 .entradilla{
   position: fixed;
-  bottom: 20%;
+  bottom: 10%;
   margin-left: 7vh;
   margin-right: 7vh;
   
@@ -73,19 +82,21 @@ nav{
 
 .redes{
   position: fixed;
-  top: 20%;
+  top: 15%;
   left: 3%;
+  display: flex;
+  font-size:12px;
+  flex-direction: column;
 }
 .contenedor-grid {
-    position: fixed;
-    top: 25%;
-    left: 3%;
+
     display: inline-grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
     background-color: #b4b4b4;
     border-radius: 4%;
     padding: 5px;
+    width: 100px;
   }
   .grid-item1 {
     border-radius: 10%;
@@ -296,4 +307,20 @@ nav{
   right:2%;
 }
 
+
+@media screen and (max-width: 800px) {
+  .redes{
+    text-align: center;
+    margin: 0% 10% 0% 20%;
+  }
+  .contenedor-grid{
+    
+    grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
+    width: 50%;
+    background-color: white;
+  }
+  .links-chulos{
+    display: none;
+  }
+}
 /* A falta de aplicar css al login*/

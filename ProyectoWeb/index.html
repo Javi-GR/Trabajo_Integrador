@@ -58,13 +58,18 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
           <li><a href="./login.html" class="links-chulos">Login</a></li>
           <div id="mensaje"></div>
         </ul>
+        <div class="burger">
+            <div class="linea1"></div>
+            <div class="linea2"></div>
+            <div class="linea3"></div>
+        </div>
       </nav>
     </header>
     <main>
       <!--Display Grid (page.css)-->
-      
-      <aside>
-        <div class="redes"><p>Encuéntrame en:</p></div>
+
+      <section class="redes">
+        <div><p>Encuéntrame en:</p></div>
         <div class="contenedor-grid">
           <a href="https://www.linkedin.com/" target="_blank"
             ><div class="grid-item1"></div
@@ -91,19 +96,26 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
             ><div class="grid-item8"></div
           ></a>
         </div>
-      </aside>
+      </section>
 
       <!--Dropdown del texto central -->
       <section class="presentacion">
         <div class="bloque-texto-central">
-          <button class="texto-central">Currículum
+          <button class="texto-central">
+            Currículum
             <p>¿Ayuda?</p>
           </button>
-          
+
           <div class="dropdown-content">
-            <a href="#">Trabajos y articulos de interes en [Proyectos]</a>
-            <a href="#">Mas información en el apartado de contactos</a>
-            <a href="#">O en mi correo (JaviGracian1998@gmail.com)</a>
+            <a href="./projects.html"
+              >Trabajos y articulos de interes en [Proyectos]</a
+            >
+            <a href="./contact.html"
+              >Mas información en el apartado de contactos</a
+            >
+            <a href="./contact.html"
+              >O en mi correo (JaviGracian1998@gmail.com)</a
+            >
           </div>
         </div>
 
@@ -112,43 +124,44 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
             ¡Hola!, y lo primero, gracias por visitar mi página, en la que
             veréis algunos proyectos personales (o que han quedado en el olvido)
             y quería compartir antes de que se perdiesen para siempre. ¡Espero
-            que os guste!<br />
+            que os guste!
             Yyyy... agarrate que viene texto de relleno y pruebas que he ido
             haciendo en la página.
           </h3>
         </div>
       </section>
-      
     </main>
-
-    <!--Animación al entrar en la página-->
-    <div class="intro">
-      <div class="intro-texto">
-        <h1 class="oculto">
-          <span class="texto">¡Hola!</span>
-        </h1>
-        <h1 class="oculto">
-          <span class="texto">Bienvenido a mi</span>
-        </h1>
-        <h1 class="oculto">
-          <span class="texto">Currículum</span>
-        </h1>
-      </div>
-    </div>
-    <div class="slider"></div>
-    <!--Introduzco GSAP, un CDN de javascript que facilita la animación de la página con funciones
-         como establecer una linea de tiempo e ir adaptando la animación al gusto-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
-      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./app.js"></script>
-    <script>
-      document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
-        "usuario"
-      );
-    </script>
   </body>
+
   <footer class="pie-pagina">2021&copy JaviGracian1998@gmail.com</footer>
+
+  <!--Animación al entrar en la página-->
+  <div class="intro">
+    <div class="intro-texto">
+      <h1 class="oculto">
+        <span class="texto">¡Hola!</span>
+      </h1>
+      <h1 class="oculto">
+        <span class="texto">Bienvenido a mi</span>
+      </h1>
+      <h1 class="oculto">
+        <span class="texto">Currículum</span>
+      </h1>
+    </div>
+  </div>
+  <div class="slider"></div>
+
+  <!--Introduzco GSAP, un CDN de javascript que facilita la animación de la página con funciones
+         como establecer una linea de tiempo e ir adaptando la animación al gusto-->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./app.js"></script>
+  <script>
+    document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
+      "usuario"
+    );
+  </script>
 </html>
