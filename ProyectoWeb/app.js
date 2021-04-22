@@ -8,3 +8,16 @@ tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 tl.fromTo("nav", {opacity: 0},{opacity: 1 , duration: 1});
 
 tl.fromTo(".texto-grande", {opacity: 0},{opacity: 1 , duration: 1});
+
+/* Funcion que activa la animacion de aparicion y desaparicion del menu de navegacion en formato movil
+*/
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click',()=>{
+        nav.classList.toggle('nav-active');
+    });
+}
+
+navSlide();

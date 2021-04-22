@@ -32,7 +32,13 @@ nav{
   justify-content: space-around;
   list-style: none;
 }
-
+.burger{
+  position: fixed;
+  top: 4%;
+  right:4%;
+  display: none;
+  
+}
 .burger div{
   width: 25px;
   height: 4px;
@@ -318,9 +324,34 @@ nav{
     grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
     width: 50%;
     background-color: white;
+    
   }
-  .links-chulos{
-    display: none;
+  body{
+    overflow-x: hidden;
   }
+  .burger{
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .nav-links{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #cecece;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+  }
+  .nav-active{
+    transform: translateX(0%);
+  }
+  
 }
-/* A falta de aplicar css al login*/
+
