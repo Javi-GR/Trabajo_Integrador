@@ -88,11 +88,14 @@ nav{
 
 .redes{
   position: fixed;
-  top: 15%;
+  top: 10%;
   left: 3%;
   display: flex;
   font-size:12px;
   flex-direction: column;
+}
+.redes p{
+  margin-bottom: 15px;
 }
 .contenedor-grid {
 
@@ -254,9 +257,8 @@ nav{
   padding: 5px;
   border-radius: 5px;
   position: fixed;
-  display:inline-flex;
-  bottom: 5%;
-  left:42%;
+  display: inline-flex;
+  align-items: center;
   font-size: 12px;
 }
 
@@ -317,13 +319,15 @@ nav{
 @media screen and (max-width: 800px) {
   .redes{
     text-align: center;
+    display: flex;
     margin: 0% 10% 0% 20%;
   }
   .contenedor-grid{
-    
+    align-items: center;
     grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
     width: 50%;
     background-color: white;
+    
     
   }
   body{
