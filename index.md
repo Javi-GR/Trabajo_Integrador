@@ -1,8 +1,9 @@
 # Javier Gracian 
- 
- 
 ## Currículum personal.
+## 23/04/2021
 
+
+<h3>Bienvenido a mi repositorio de GitHub, aqui están los archivos que me han resultado útiles para realizar mi web</h3>
 
 <details>
 <summary>Borradores</summary>
