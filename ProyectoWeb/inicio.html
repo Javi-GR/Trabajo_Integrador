@@ -28,75 +28,110 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
     
     </div>
 
-<body>
-    <!--Contador de clicks en scripts.js-->
-    <div class="formato-contador">
-        <div>Clicks en mi web--></div>
-        <div id="counter"></div>
-    </div>
-
-        <section class="pag-inicio">
-            <nav>
-                <h1 id="logo">Javier Gracián</h1>
-                <ul class="nav-links">
-                    <li><a href = "./inicio.html" class="links-chulos" id="selected">Inicio</a></li>
-                    <li><a href = "./contact.html" class="links-chulos">Contacto</a></li>
-                    <li><a href = "./projects.html" class="links-chulos" >Proyectos</a></li>
-                    <!--Ejercicio login con session storage-->
-                    <li><a href="./login.html" class="links-chulos">Login</a></li>
-                    <div id="mensaje"></div>
-                </ul>
-            </nav>
-        </section>
-
-        
-
-        <!--Display Grid (page.css)-->
-        <aside>
-            <div class="redes"><p>Encuéntrame en: </p></div>
-            <div class = "contenedor-grid">
-
-                <a name="Linkedin" href="https://www.linkedin.com/" target="_blank"><div class = "grid-item1"></div></a>
-                <a name ="Twitch" href="https://www.twitch.tv/" target="_blank"><div class = "grid-item2"></div></a>
-                <a name ="Twitter"href="https://twitter.com/" target="_blank"><div class = "grid-item3"></div></a>
-                <a name ="Pinterest"href="https://www.pinterest.es/" target="_blank"><div class = "grid-item4"></div></a>
-                <a name ="Youtube"href="https://www.youtube.com/" target="_blank"><div class = "grid-item5"></div></a>
-                <a name ="Facebook"href="https://www.facebook.com/" target="_blank"><div class = "grid-item6"></div></a>
-                <a name ="Instagram"href="https://www.instagram.com/" target="_blank"><div class = "grid-item7"></div></a>
-                <a name ="Github"href="https://github.com/" target="_blank"><div class = "grid-item8"></div></a>
-
-            </div>
-        </aside>
-
-        <!-- Aquí está el bloque central de la página con un dropdown con información acerca de la página-->
-        <div class="bloque-texto-central">
-            <button class="texto-central">Currículum
-            </button>
-            <p id="ayuda">¿Ayuda?</p>
-            <div class="dropdown-content">
-                <a href="#">Trabajos y articulos de interés en [Proyectos]</a>
-                <a href="#">Mas información en el apartado de contactos</a>
-                <a href="#">O en mi correo personal (JaviGracian1998@gmail.com)</a>
-            </div>
+    <body>
+        <div class="formato-contador">
+          <div>Clicks en mi web --></div>
+          <div id="counter"></div>
         </div>
-        
-
-
-        <main id="descripcion-inicio">
-            <article>
-                <h3>¡Hola!, y lo primero, gracias por visitar mi página, en la que veréis 
-                    algunos proyectos personales (o que han quedado en el olvido) y quería compartir antes de que se perdiesen para siempre. 
-                    ¡Espero que os guste!<br> Yyyy... agarrate que viene texto de relleno y pruebas que he ido haciendo en la página  </h3>
-            </article>
-            
-            
+    
+        <header>
+          <div class="logo-container">
+            <h4 class="logo">Javier Gracián</h4>
+          </div>
+    
+          <nav>
+            <ul class="nav-links">
+              <li>
+                <a href="./inicio.html" class="links-chulos" id="selected"
+                  >Inicio</a
+                >
+              </li>
+              <li><a href="./contact.html" class="links-chulos">Contacto</a></li>
+              <li><a href="./projects.html" class="links-chulos">Proyectos</a></li>
+              <!--Ejercicio login con session storage-->
+              <li><a href="./login.html" class="links-chulos">Login</a></li>
+              <div id="mensaje"></div>
+            </ul>
+            <div class="burger">
+                <div class="linea1"></div>
+                <div class="linea2"></div>
+                <div class="linea3"></div>
+            </div>
+          </nav>
+        </header>
+        <main>
+          <!--Display Grid (page.css)-->
+    
+          <section class="redes">
+            <div><p>Encuéntrame en:</p></div>
+            <div class="contenedor-grid">
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><div class="grid-item1"></div
+              ></a>
+              <a href="https://www.twitch.tv/" target="_blank"
+                ><div class="grid-item2"></div
+              ></a>
+              <a href="https://twitter.com/" target="_blank"
+                ><div class="grid-item3"></div
+              ></a>
+              <a href="https://www.pinterest.es/" target="_blank"
+                ><div class="grid-item4"></div
+              ></a>
+              <a href="https://www.youtube.com/" target="_blank"
+                ><div class="grid-item5"></div
+              ></a>
+              <a href="https://www.facebook.com/" target="_blank"
+                ><div class="grid-item6"></div
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><div class="grid-item7"></div
+              ></a>
+              <a href="https://github.com/" target="_blank"
+                ><div class="grid-item8"></div
+              ></a>
+            </div>
+          </section>
+    
+          <!--Dropdown del texto central -->
+          <section class="presentacion">
+            <div class="bloque-texto-central">
+              <button class="texto-central">
+                Currículum
+                <p>¿Ayuda?</p>
+              </button>
+    
+              <div class="dropdown-content">
+                <a href="./projects.html"
+                  >Trabajos y articulos de interes en [Proyectos]</a
+                >
+                <a href="./contact.html"
+                  >Mas información en el apartado de contactos</a
+                >
+                <a href="./contact.html"
+                  >O en mi correo (JaviGracian1998@gmail.com)</a
+                >
+              </div>
+            </div>
+    
+            <div class="entradilla">
+              <h3>
+                ¡Hola!, y lo primero, gracias por visitar mi página, en la que
+                veréis algunos proyectos personales (o que han quedado en el olvido)
+                y quería compartir antes de que se perdiesen para siempre. ¡Espero
+                que os guste!
+                Yyyy... agarrate que viene texto de relleno y pruebas que he ido
+                haciendo en la página.
+              </h3>
+            </div>
+          </section>
         </main>
-        
-    <script>
-        document.getElementById("mensaje").innerHTML = sessionStorage.getItem("usuario");
-    </script>
-</body>
+      </body>
 
 <footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
-
+<script src="./app.js"></script>
+<script>
+    document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
+      "usuario"
+    );
+  </script>
 </html>
