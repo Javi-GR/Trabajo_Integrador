@@ -14,7 +14,7 @@
 <details>
 <summary>Documentos</summary>
  <br>
- <li><a href="../DOCS/RutinaBackupsWEB.pdf">Rutina Backups</a></li>
+ <li><a href="./DOCS/RutinaBackupsWEB.pdf">Rutina Backups</a></li>
  <li><a href="#">Todavia por completar</a></li>
 </details>
 
