@@ -46,12 +46,18 @@ nav{
 .burger div{
   width: 25px;
   height: 4px;
-  background-color: #3b3b3b;
+  background-color:white;
   margin: 3px;
   border-radius: 35%;
 }
 
 .presentacion{
+  position: absolute;
+  right:0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 15%;
   display: flex;
   width: 90%;
   height: inherit;
@@ -62,9 +68,10 @@ nav{
 .entradilla{
   position: fixed;
   bottom: 10%;
-  margin-left: 7vh;
-  margin-right: 7vh;
-  
+  font-size: 15px;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  color: white;
 }
 .nav-links li{
     font-size: 1.2rem;
@@ -157,9 +164,10 @@ nav{
 
   }
   .grid-item7 {
-    margin: 5px;
-    padding: 20px;
-    background-image: url(https://markfom.cl/wp-content/uploads/2020/04/instagram.png);
+    margin-left: -2px;
+    margin-top: 4px;
+    padding:21px;
+    background-image: url(https://freepikpsd.com/wp-content/uploads/2019/10/instagram-icon-png-black-6-Transparent-Images.png);
     background-size: cover;
 
   }
@@ -196,7 +204,7 @@ nav{
   position: absolute; 
   left: 0; 
   right: 0; 
-  top: 20%;
+  top: 30%;
   margin-left: auto; 
   margin-right: auto; 
   width: 320px;
@@ -218,7 +226,7 @@ nav{
 .bloque-texto-central .texto-central{
     border: none;
     outline: none;
-    color: #3b3b3b;
+    color: white;
     padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit;
@@ -226,7 +234,7 @@ nav{
 }
 
 .bloque-texto-central:hover{
-    background-color: rgb(255, 236, 221);
+    background-color: rgb(94, 94, 94);
 }
 
 .dropdown-content {
@@ -270,11 +278,15 @@ nav{
 }
 .formato-contador{
   background: #9c9c9c;
-  padding: 5px;
   border-radius: 5px;
   position: fixed;
-  bottom: 0%;
-  right: 0%;
+  left: 0;
+  bottom: 3vh;
+  width: 25vh;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -347,6 +359,31 @@ nav{
 
 
 @media screen and (max-width: 800px) {
+  .nav-links{
+    position: absolute;
+    top: -10%;
+    right: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #070707;
+    transform: translateX(125%);
+    transition: transform 0.5s ease-in;
+    
+
+  }
+  .nav-active{
+    
+    transform: translateX(25%);
+    
+    
+  }
+  
+  .formcaja, .texto-medio, .formato-contador, .presentacion{
+    z-index: -1;
+  }
   .redes{
     position: absolute;
     right: 0;
@@ -356,6 +393,7 @@ nav{
     text-align: center;
     display: flex;
     width: 400px;
+    z-index: -1;
   }
   .contenedor-grid{
     align-items: center;
@@ -373,28 +411,7 @@ nav{
     cursor: pointer;
     z-index: 2;
   }
-  .nav-links{
-    position: absolute;
-    top: -10%;
-    right: 0px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    z-index: 1;
-    background-color: #cecece;
-    transform: translateX(125%);
-    transition: transform 0.5s ease-in;
-    
-
-  }
-  .nav-active{
-    
-    transform: translateX(25%);
-    
-    
-  }
+  
   
 }
 
