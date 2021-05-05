@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+  background-color: #1f1f1f;
+}
 header{
   position: fixed;
   top: 1%;
@@ -51,20 +53,7 @@ nav{
   border-radius: 35%;
 }
 
-.presentacion{
-  position: absolute;
-  right:0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: 15%;
-  display: flex;
-  width: 90%;
-  height: inherit;
-  margin: auto;
-  align-items: center;
-  flex-direction: column;
-}
+
 .entradilla{
   position: fixed;
   bottom: 10%;
@@ -213,12 +202,14 @@ nav{
 }
 
 .bloque-texto-central{
-  
-  float: left;
+  position: absolute;
+  top: 30vh;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
   overflow: hidden;
-   flex:1;
-   margin-top: 15vh;
-   margin-bottom: 20vh;
     
     
 }
@@ -290,7 +281,6 @@ nav{
   display: flex;
   align-items: center;
   font-size: 12px;
-  z-index: 1;
   height: 23px;
   
 }
@@ -356,9 +346,14 @@ nav{
   top:17%;
   right:2%;
 }
-
+.particles-off{
+  margin-right: 20vh;
+}
 
 @media screen and (max-width: 800px) {
+  header{
+    z-index: 1;
+  }
   .nav-links{
     position: absolute;
     top: -10%;
@@ -371,18 +366,18 @@ nav{
     background-color: #070707;
     transform: translateX(125%);
     transition: transform 0.5s ease-in;
-    
 
   }
   .nav-active{
-    
     transform: translateX(25%);
-    
-    
   }
   
-  .formcaja, .texto-medio, .formato-contador, .presentacion{
-    z-index: -1;
+  .particles-off{
+    margin-left: 9vh;
+  }
+  
+  #particles-js{
+    z-index: -2;
   }
   .redes{
     position: absolute;
@@ -393,7 +388,6 @@ nav{
     text-align: center;
     display: flex;
     width: 400px;
-    z-index: -1;
   }
   .contenedor-grid{
     align-items: center;

@@ -22,3 +22,4 @@ tl.fromTo("nav", {opacity: 0},{opacity: 1 , duration: 1});
 
 tl.fromTo(".texto-grande", {opacity: 0},{opacity: 1 , duration: 1});
 
+
