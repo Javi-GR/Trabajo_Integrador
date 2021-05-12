@@ -1,4 +1,4 @@
-
+/* Configuración de las páritculas de fondo de la página */
 
 particlesJS('particles-js',
   

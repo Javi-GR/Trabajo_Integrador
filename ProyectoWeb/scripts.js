@@ -1,3 +1,4 @@
+//Login
 document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
   "usuario"
 );
@@ -18,6 +19,7 @@ function guardar() {
   return false;
 }
 
+// Contador de clicks
 var n = sessionStorage.getItem("on_load_counter");
 
 if (n === null) {
