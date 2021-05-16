@@ -15,6 +15,7 @@ fecha: 27 enero
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
     rel="stylesheet">
+  <script src="desconectar.js"></script>
   <link rel="stylesheet" href="./page.css">
   <script src="scripts.js"></script>
 </head>
@@ -24,8 +25,12 @@ fecha: 27 enero
     <style>
       .form{
         position: absolute;
-        top: 31%;
-        left: 38%;
+        right: 0;
+        left: 0;
+        top: 30%;
+        margin-right:auto;
+        margin-left: auto;
+        width: 45vh;
       }
       a{
         text-decoration: none;
@@ -48,13 +53,17 @@ fecha: 27 enero
 
   <div class="form">
     <div class="format">
-    <h1>Ejemplo Session Storage</h1>
+    <h1>Ejemplo Login</h1>
     <a href="./inicio.html">Volver a página principal</a><br>
-    <form name="miFormulario" onSubmit="return guardar()">
-      <label for="usuario">Usuario:</label><br>
-      <input type="text" id="usuario" name="usuario" maxlength="10" required><br>
-      <input type="submit" value="Guardar">
-    </form>
+    <form method="POST" id="ingresar" name="miFormulario" onSubmit="return intentar()">
+			<label for="apellido">Usuario:</label>
+			<input type="text" id="usr" name="formUsuario" required><br>
+			<label for="apellido">Clave:</label>
+			<input type="text" id="clv" name="formClave" required><br>
+			<input type="submit" value="INGRESAR">
+		</form>
+    <button id="desconectar" onclick="desconectar()">DESCONECTAR</button>
+		<button onclick="desconectar()">LIMPIAR MEMORIA</button>
   </div>
   </div>
   <!-- creamos un elemento vacío para luego poner allí el resultado
