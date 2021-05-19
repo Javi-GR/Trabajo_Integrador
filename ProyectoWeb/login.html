@@ -16,6 +16,7 @@ fecha: 27 enero
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
     rel="stylesheet">
   <script src="desconectar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="./page.css">
   <script src="scripts.js"></script>
 </head>
@@ -49,20 +50,20 @@ fecha: 27 enero
   </header>
 
   <div id="counter"></div>
- 
+  <div id="mesnajeUSR"></div>
 
   <div class="form">
     <div class="format">
     <h1>Ejemplo Login</h1>
     <a href="./inicio.html">Volver a página principal</a><br>
-    <form method="get" id="ingresar" name="miFormulario" onSubmit="return intentar()">
+    <form  id="ingresar" name="miFormulario" onSubmit="return intentar()" method="get">
 			<label for="username">Usuario:</label>
 			<input type="text" id="usr" name="usrIntentando" required><br>
 			<label for="password">Clave:</label>
 			<input type="text" id="clv" name="claveIntentando" required><br>
-			<input class="botonSesion" type="submit" value="Iniciar Sesión">
+			<input class="botonSesion" type="submit" value="Login">
 		</form>
-    <input type="button" id="desconectar" value="Cerrar Sesión" onclock="return desconectar()"></input>
+    <input type="button" id="desconectar" value="Logout" onclick="return desconectar()" style="display: none;"></input>
 		
   </div>
   </div>
