@@ -10,133 +10,128 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
 -->
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./page.css" />
-    <!--Fuentes de Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
-        rel="stylesheet">
-    <script defer src="scripts.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./page.css" />
+  <!--Fuentes de Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
+    rel="stylesheet">
+  <script defer src="scripts.js"></script>
+  <script src="./desconectar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <title>CV Javi Gracian</title>
 <!--Video de Youtube-->
 <div id="video">
-    <iframe width="430" height="215" src="https://www.youtube.com/embed/lxEZNFkfGPA" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
-    
+  <iframe width="430" height="215" src="https://www.youtube.com/embed/lxEZNFkfGPA" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+
+</div>
+
+<body onload="controlar()">
+
+
+  <div id="particles-js"></div>
+  <script src="particles.js"></script>
+  <script src="conf_part.js"></script>
+  <div class="formato-contador">
+    <div>Clicks en mi web --></div>
+    <div id="counter"></div>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <h4 class="logo">Javier Gracián</h4>
     </div>
 
-    <body>
-      <div id="particles-js"></div>
-      <script src ="particles.js"></script>
-    <script src ="conf_part.js"></script>
-        <div class="formato-contador">
-          <div>Clicks en mi web --></div>
-          <div id="counter"></div>
-        </div>
-    
-        <header>
-          <div class="logo-container">
-            <h4 class="logo">Javier Gracián</h4>
-          </div>
+    <button class="particles-off" onclick="noParticulas()">
+      Desactivar particulas
+    </button>
 
-          <button class="particles-off" onclick="noParticulas()" >
-            Desactivar particulas
-          </button>
-          
-          <nav>
-            <ul class="nav-links">
-              <li>
-                <a href="./inicio.html" class="links-chulos" id="selected"
-                  >Inicio</a
-                >
-              </li>
-              <li><a href="./contact.html" class="links-chulos">Contacto</a></li>
-              <li><a href="./projects.html" class="links-chulos">Proyectos</a></li>
-              <!--Ejercicio login con session storage-->
-              <li><a href="./login.html" class="links-chulos">Login</a></li>
-              <div id="mensaje"></div>
-            </ul>
-            <div class="burger">
-                <div class="linea1"></div>
-                <div class="linea2"></div>
-                <div class="linea3"></div>
-            </div>
-          </nav>
-        </header>
-        <main>
-          <!--Display Grid (page.css)-->
-    
-          <section class="redes">
-            <div><p>Encuéntrame en:</p></div>
-            <div class="contenedor-grid">
-              <a href="https://www.linkedin.com/" target="_blank"
-                ><div class="grid-item1"></div
-              ></a>
-              <a href="https://www.twitch.tv/" target="_blank"
-                ><div class="grid-item2"></div
-              ></a>
-              <a href="https://twitter.com/" target="_blank"
-                ><div class="grid-item3"></div
-              ></a>
-              <a href="https://www.pinterest.es/" target="_blank"
-                ><div class="grid-item4"></div
-              ></a>
-              <a href="https://www.youtube.com/" target="_blank"
-                ><div class="grid-item5"></div
-              ></a>
-              <a href="https://www.facebook.com/" target="_blank"
-                ><div class="grid-item6"></div
-              ></a>
-              <a href="https://www.instagram.com/" target="_blank"
-                ><div class="grid-item7"></div
-              ></a>
-              <a href="https://github.com/" target="_blank"
-                ><div class="grid-item8"></div
-              ></a>
-            </div>
-          </section>
-    
-          <!--Dropdown del texto central -->
-            <div class="bloque-texto-central">
-              <button class="texto-central">
-                Currículum
-                <p>¿Ayuda?</p>
-              </button>
-    
-              <div class="dropdown-content">
-                <a href="./projects.html"
-                  >Trabajos y articulos de interes en [Proyectos]</a
-                >
-                <a href="./contact.html"
-                  >Mas información en el apartado de contactos</a
-                >
-                <a href="./dolly_zoom.html"
-                  >Para ver Efecto Dolly y Ken Burns pulsa aquí</a
-                >
-              </div>
-            </div>
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a href="./inicio.html" class="links-chulos" id="selected">Inicio</a>
+        </li>
+        <li><a href="./contact.html" class="links-chulos">Contacto</a></li>
+        <li><a href="./projects.html" class="links-chulos">Proyectos</a></li>
+        <!--Ejercicio login con session storage-->
+        <li><a href="./login.html" class="links-chulos" id="mensajeSesion"></a></li>
+        <div id="mensajeUSR"></div>
+      </ul>
+      <div class="burger">
+        <div class="linea1"></div>
+        <div class="linea2"></div>
+        <div class="linea3"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--Display Grid (page.css)-->
 
-            
+    <section class="redes">
+      <div>
+        <p>Encuéntrame en:</p>
+      </div>
+      <div class="contenedor-grid">
+        <a href="https://www.linkedin.com/" target="_blank">
+          <div class="grid-item1"></div>
+        </a>
+        <a href="https://www.twitch.tv/" target="_blank">
+          <div class="grid-item2"></div>
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <div class="grid-item3"></div>
+        </a>
+        <a href="https://www.pinterest.es/" target="_blank">
+          <div class="grid-item4"></div>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank">
+          <div class="grid-item5"></div>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <div class="grid-item6"></div>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <div class="grid-item7"></div>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <div class="grid-item8"></div>
+        </a>
+      </div>
+    </section>
 
-            <div class="entradilla" >
-              <h3>
-                ¡Hola!, y lo primero, gracias por visitar mi página, en la que
-                veréis algunos proyectos personales 
-                que quería compartir antes de que se perdiesen para siempre. ¡Espero
-                que os guste!
-              </h3>
-            </div>
-        </main>
-      </body>
+    <!--Dropdown del texto central -->
+    <div class="bloque-texto-central">
+      <button class="texto-central">
+        Currículum
+        <p>¿Ayuda?</p>
+      </button>
 
-<footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
+      <div class="dropdown-content">
+        <a href="./projects.html">Trabajos y articulos de interes en [Proyectos]</a>
+        <a href="./contact.html">Mas información en el apartado de contactos</a>
+        <a href="./dolly_zoom.html">Para ver Efecto Dolly y Ken Burns pulsa aquí</a>
+      </div>
+    </div>
+
+
+
+    <div class="entradilla">
+      <h3>
+        ¡Hola!, y lo primero, gracias por visitar mi página, en la que
+        veréis algunos proyectos personales
+        que quería compartir antes de que se perdiesen para siempre. ¡Espero
+        que os guste!
+      </h3>
+    </div>
+  </main>
+</body>
+
+<footer class="pie-pagina">2021&copy JaviGracian1998@gmail.com</footer>
 <script src="./app.js"></script>
-<script>
-    document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
-      "usuario"
-    );
-  </script>
+
 </html>

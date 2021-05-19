@@ -1,4 +1,4 @@
-//Login
+/*//Login
 document.getElementById("mensaje").innerHTML = sessionStorage.getItem(
   "usuario"
 );
@@ -17,7 +17,7 @@ function guardar() {
       "Este navegador no soporta web storage...";
   }
   return false;
-}
+}*/
 
 // Contador de clicks
 var n = sessionStorage.getItem("on_load_counter");

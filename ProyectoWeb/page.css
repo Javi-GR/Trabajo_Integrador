@@ -306,11 +306,11 @@ nav{
   margin-right: auto;
   width: 250px;
 }
-#mensaje{
+#mensajeUSR{
     position: absolute;
-    right: 2%;
-    top: 4%;
-    color: #3b3b3b;
+    right: -10%;
+    top: 100%;
+    color: #b4b4b4;
 }
 #proyectos-contenedor{
   position:absolute;
@@ -367,6 +367,9 @@ nav{
     transform: translateX(125%);
     transition: transform 0.5s ease-in;
 
+  }
+  #mensajeUSR{
+    display: none;
   }
   .nav-active{
     transform: translateX(25%);
