@@ -32,6 +32,8 @@ sessionStorage.setItem("on_load_counter", n);
 
 document.getElementById("counter").innerHTML = n;
 
+
 function noParticulas() {
   document.getElementById("particles-js").style.display = "none";
+  
 }
