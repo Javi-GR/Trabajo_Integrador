@@ -23,68 +23,68 @@ function controlar(){
 	// 1 - sin usuario
 	// 2 - usuario intentando ingresar
 	// 3 - usuario con sesion iniciada
+	
 	$("#ingresar").show();
 	$("#desconectar").hide();
 			
-	if (sessionStorage.getItem("usrLogueado")) {
+	if (sessionStorage.getItem("usuarioLogueado")) {
 		// estado 3 de nuestro diagrama de estados - con usuario
 		// estamos cargando la página teniendo un usuario logueado previamente
 		// y con la sesión activa pues no se ha desconectado aún
 		// ocultamos formulario de login y mostramos desconectar
+		var url=location.url;
 		$("#ingresar").hide();
 		$("#desconectar").show();	
 		
 	} else {
-		//if (sessionStorage.getItem("usuarioIntentando")) {
+		if (sessionStorage.getItem("usuarioIntentando")) {
 			// estado 2 de nuestro diagrama de estados - transición
 			// estamos recargando luego de que haya un intento de login
 			// debemos validar si el usuario existe
 			validarXML();
+			//window.location.assing("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
 			// tardo un poco en recargar para dar tiempo a AJAX?
-			//for(let timer=1;timer<1000000;timer++);
-			//location.reload();
+			for(let timer=1;timer<1000000;timer++);
+			location.reload();
 			
-		//} else {
+		} else {
 			// estado 1 de nuestro diagrama de estados - sin usuario
 			// mostramos formulario de login y ocultamos desconectar
-			//$("#ingresar").show();
-			//$("#desconectar").hide();
+			$("#ingresar").show();
+			$("#desconectar").hide();
 		}
-		nombreUSR();
 	}
-
-	function desconectar(){
-		sessionStorage.removeItem("usrLogueado");
-		sessionStorage.removeItem("usrIntentando");
-		sessionStorage.removeItem("claveIntentando");
-		location.reload();
-	}
-
+}
 	
 	function intentar(){
-		
+		if (typeof(Storage) !== "undefined") {
 		  
 		  // oculta la opción de login 
-		  $("#ingresar").hide();
+		  // $("#ingresar").hide();
 		  
 		  // Almacena un valor usando el método setItem del objeto localStorage
-		  var x=document.forms["miFormulario"]["usrIntentando"].value;
-		  var y=document.forms["miFormulario"]["claveIntentando"].value;
-		  sessionStorage.setItem("usrIntentando", x);
+		  var x=document.forms["miFormulario"]["usuario"].value;
+		  var y=document.forms["miFormulario"]["password"].value;
+		  console.log(x,y);
+		  sessionStorage.setItem("usuarioIntentando", x);
 		  sessionStorage.setItem("claveIntentando", y);
-		  validarXML();
-		  location.reload();
-		  return;
 		  
 		  // ya tengo en memoria webStorage lo que puso en el formulario
 		  // al recargarse la página podré recordar esta información
 
-		
+		} else {
+		  document.getElementById("mensaje").innerHTML = "Este navegador no soporta web storage...";
+		}
+		//window.location.assing("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
 	}
 	
 	function validarXML() {
 		
 		// lee desde aquí.
+		usuarioIntentando=sessionStorage.getItem("usuarioIntentando");
+		claveIntentando=sessionStorage.getItem("claveIntentando");
+		sessionStorage.removeItem("usuarioIntentando");
+		sessionStorage.removeItem("claveIntentando");
 		
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
@@ -103,31 +103,30 @@ function controlar(){
 	  var usuario = [];
 	  var xmlDoc = xml.responseXML;
 	  var x = xmlDoc.getElementsByTagName("usuario");
-	  sessionStorage.removeItem("usrLogueado");
+	  sessionStorage.removeItem("usuarioLogueado");
 	  
 	  for (i = 0; i <x.length; i++) { 
 		// leo las etiquetas que me interesan del objeto
 		usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
 		usrPsw = x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue;
 		// actualizo la tabla de visualización
-		if ((usrNom == sessiosStorage.getItem("usrIntentando")) && (usrPsw == sessionStrorage.getItem("claveIntentando"))) {
+		if ((usrNom == usuarioIntentando) && (usrPsw == claveIntentando)) {
 		  // destaca el usuario que coincide con lo que buscamos
-		  sessionStorage.setItem("usrLogueado",usrNom);
+		  sessionStorage.setItem("usuarioLogueado","usuarioIntentando");
 		}
 	  }
-	  return;
 	}
 
-	function nombreUSR(){
-		if(sessionStorage.usrLogueado){
-			$("#mensajeUSR").text('Hola ' + sessionStorage.getItem("usrLogueado"));
-			$("#mensajeSesion").text('Logout');
-		}
-		else{
-			$("#mensajeUSR").text('Usuario no registrado');
-			$("#mensajeSesion").text('Login');
-		}
+	function desconectar(){
+		sessionStorage.removeItem("usuarioLogueado");
+		sessionStorage.removeItem("usuarioIntentando");
+		sessionStorage.removeItem("claveIntentando");
+		$("#ingresar").show();
+		$("#desconectar").hide();
+		location.reload();
 	}
+	
+	
 
 	
 	

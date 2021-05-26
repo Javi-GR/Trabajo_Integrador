@@ -1,15 +1,3 @@
-/* Funcion que activa la animacion de aparicion y desaparicion del menu de navegacion en formato movil
-*/
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-
-    burger.addEventListener('click',()=>{
-        nav.classList.toggle('nav-active');
-    });
-}
-
-navSlide();
 
 /*Anima el timeline de las letras iniciales*/
 

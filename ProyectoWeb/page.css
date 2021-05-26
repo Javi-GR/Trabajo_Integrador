@@ -6,6 +6,9 @@
 }
 body{
   background-color: #1f1f1f;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
 }
 header{
   position: fixed;
@@ -153,10 +156,10 @@ nav{
 
   }
   .grid-item7 {
-    margin-left: -2px;
-    margin-top: 4px;
-    padding:21px;
-    background-image: url(https://freepikpsd.com/wp-content/uploads/2019/10/instagram-icon-png-black-6-Transparent-Images.png);
+    margin: 5px;
+    padding: 18px;
+    margin-left: 0;
+    background-image: url(https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png);
     background-size: cover;
 
   }
@@ -306,25 +309,42 @@ nav{
   margin-right: auto;
   width: 250px;
 }
-#mensajeUSR{
-    position: absolute;
-    right: -10%;
-    top: 100%;
-    color: #b4b4b4;
-}
+
+
 #proyectos-contenedor{
-  position:absolute;
-  overflow:scroll;
-  max-width: 75%;
-  max-height: 50%;
-  top:40%;
-  right:18%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top:50%;
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10%;
+     
 }
-.img-haggling {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
+.scroll-down{
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  color: white;
+  font-size: 2vh;
 }
+#hijos-contenedor{
+  width: 100%;
+    height: 40%;
+    overflow-y: scroll;
+    padding-right: 17px; 
+    box-sizing: content-box;
+    
+}
+.img-haggling{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 #particles-js{
   height:99vh;
   background: #1f1f1f;
@@ -332,11 +352,9 @@ nav{
 .texto-proyectos{
   position: relative;
   text-align: center;
+  color:white;
 }
-.img-gea{
-  display:flex;
-  padding-left: 40%;
-}
+
 #video{
   display: none;
   background: #b4b4b4;
@@ -349,6 +367,7 @@ nav{
 .particles-off{
   margin-right: 20vh;
 }
+
 
 @media screen and (max-width: 800px) {
   header{

@@ -50,27 +50,23 @@ fecha: 27 enero
   </header>
 
   <div id="counter"></div>
-  <div id="mesnajeUSR"></div>
 
   <div class="form">
     <div class="format">
     <h1>Ejemplo Login</h1>
     <a href="./inicio.html">Volver a página principal</a><br>
-    <form  id="ingresar" name="miFormulario" onSubmit="return intentar()" method="get">
+    <form  id="ingresar" name="miFormulario" onSubmit="return intentar()" >
 			<label for="username">Usuario:</label>
-			<input type="text" id="usr" name="usrIntentando" required><br>
+			<input type="usuario" name="usuario" required><br>
 			<label for="password">Clave:</label>
-			<input type="text" id="clv" name="claveIntentando" required><br>
-			<input class="botonSesion" type="submit" value="Login">
+			<input type="password"name="password" required><br>
+			<input class="botonSesion" type="submit" name="Enviar">
 		</form>
-    <input type="button" id="desconectar" value="Logout" onclick="return desconectar()" style="display: none;"></input>
+    
 		
   </div>
   </div>
-  <!-- creamos un elemento vacío para luego poner allí el resultado
-      de nuestro script -->
-  <br />
-  <div id="mensajeUSR"></div>
+  
   
 </body>
 

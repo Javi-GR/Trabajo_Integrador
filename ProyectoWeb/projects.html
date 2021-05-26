@@ -25,81 +25,115 @@ Alumno: Javier Gracián Rodríguez
     <script src ="particles.js"></script>
     <script src ="conf_part.js"></script>
     <div class="formato-contador">
-        <div>Número de clicks a enlaces dentro de mi web--></div>
-        <div id="counter"></div>
+      <div>Clicks en mi web--></div>
+      <div id="counter"></div>
     </div>
- 
 
-        <section class="pag-inicio">
-            <nav>
-                <h1 id="logo">Javier Gracián</h1>
-                <ul class="nav-links">
-                    <li><a href = "./inicio.html" class="links-chulos" >Inicio</a></li>
-                    <li><a href = "./contact.html" class="links-chulos">Contacto</a></li>
-                    <li><a href = "./projects.html" class="links-chulos" id="selected">Proyectos</a></li>
-                    <!--Ejercicio login con session storage-->
-                    <li><a href="./login.html" class="links-chulos">Login</a></li>
-                    <div id="mensaje"></div>
-                </ul>
-            </nav>
-        </section>
-        <aside>
-            <!--Contenedor Grid para iconos de redes sociales-->
-            <div class="redes"><p>Encuéntrame en: </p></div>
-            <div class = "contenedor-grid">
+    <header>
+        <div class="logo-container">
+          <h4 class="logo">Javier Gracián</h4>
+        </div>
+  
+        <button class="particles-off" onclick="noParticulas()" >
+          Desactivar particulas
+        </button>
+  
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="./inicio.html" class="links-chulos" 
+                >Inicio</a
+              >
+            </li>
+            <li><a href="./dolly_zoom.html" class="links-chulos"> Dolly & Ken</a></li>
+            <li><a href="./contact.html" class="links-chulos" >Contacto</a></li>
+            <li><a href="./projects.html" class="links-chulos" id="selected">Proyectos</a></li>
+            <!--Ejercicio login con session storage-->
+            <li><a href="./login.html" class="links-chulos">Login</a></li>
+            <div id="mensaje"></div>
+          </ul>
+          <div class="burger">
+            <div class="linea1"></div>
+            <div class="linea2"></div>
+            <div class="linea3"></div>
+          </div>
+        </nav>
+      </header>
+      <section class="redes">
+        <div><p>Encuéntrame en:</p></div>
+        <div class="contenedor-grid">
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><div class="grid-item1"></div
+          ></a>
+          <a href="https://www.twitch.tv/" target="_blank"
+            ><div class="grid-item2"></div
+          ></a>
+          <a href="https://twitter.com/" target="_blank"
+            ><div class="grid-item3"></div
+          ></a>
+          <a href="https://www.pinterest.es/" target="_blank"
+            ><div class="grid-item4"></div
+          ></a>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><div class="grid-item5"></div
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><div class="grid-item6"></div
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><div class="grid-item7"></div
+          ></a>
+          <a href="https://github.com/" target="_blank"
+            ><div class="grid-item8"></div
+          ></a>
+        </div>
+      </section>
 
-                <a href="https://www.linkedin.com/" target="_blank"><div class = "grid-item1"></div></a>
-                <a href="https://www.twitch.tv/" target="_blank"><div class = "grid-item2"></div></a>
-                <a href="https://twitter.com/" target="_blank"><div class = "grid-item3"></div></a>
-                <a href="https://www.pinterest.es/" target="_blank"><div class = "grid-item4"></div></a>
-                <a href="https://www.youtube.com/" target="_blank"><div class = "grid-item5"></div></a>
-                <a href="https://www.facebook.com/" target="_blank"><div class = "grid-item6"></div></a>
-                <a href="https://www.instagram.com/" target="_blank"><div class = "grid-item7"></div></a>
-                <a href="https://github.com/" target="_blank"><div class = "grid-item8"></div></a>
-
-            </div>
-        </aside>
-            <h2 class="texto-central">Proyectos</h2>
+      <h2 class="texto-medio">Proyectos</h2>
+      <h4 class="scroll-down"><u>Scroll down!</u></h4>
 
             <!-- Overflow de imagenes y texto -->
-        <main id=proyectos-contenedor>
-            <p class="texto-proyectos"><u>Conceptos de logo para empresa de subastas online haggling.</u><br>Fecha: 23/01/2019<br>Autor: Javier Gracián <br>Tecnologías usadas: Affinity Designer y Figma (Versión reducida y completa)</p><br>
+        <main id="proyectos-contenedor">
+            <div id="hijos-contenedor">
+                <p class="texto-proyectos"><u>Conceptos de logo para empresa de subastas online haggling.</u><br>Fecha: 23/01/2019<br>Autor: Javier Gracián <br>Tecnologías usadas: Affinity Designer y Figma (Versión reducida y completa)</p><br>
             <div class="img-haggling">
                 <img src="./fotos-web/hagglingbest.png" alt="Haggling logo">
                 <img src="./fotos-web/hagglingog.png" alt="Haggling texto y logo">
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+            
             <div >
                 <p class="texto-proyectos"><u>Concepto de logo para empresa de cosméticos GEA</u><br>Autor: Javier Gracián y colaboración con diseñador.<br> Tecnologías usadas: Boceto en papel del diseñador pasado a Affinity Designer</p>
-                <img class="img-gea" src="./fotos-web/JEAfondo.png" alt="Logo GEA">
+                <div class="img-haggling">
+                    <img class="img-gea" src="./fotos-web/JEAfondo.png" alt="Logo GEA">
+                </div>
+                
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+            
             <div>
                 <p class="texto-proyectos"><u>Fondo de youtube para T5, un equipo de esports.</u>  <br>Fecha: 23/07/2018 <br>Autor: Javier Gracián <br>Tecnologías: Cinema4D y Photoshop</texto></p>
-                <img src="./fotos-web/Screenshot_14.png" alt="Fondo de youtube para cliente (Aka kronz)">
+                <div class="img-haggling">
+                    <img src="./fotos-web/Screenshot_14.png" alt="Fondo de youtube para cliente (Aka kronz)">
+                </div>
+               
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+            
             <div>
                 <p class="texto-proyectos"><u>Fondo de youtube para usuario Kronz.</u> <br>Fecha: 15/5/2018 <br>Autor: Javier  Gracián <br>Tecnologías usadas: Cinema4D, Lightroom y Photoshop</p>
-                <img src="./fotos-web/Screenshot_15.png" alt="Fondo de youtube para equipo de esports T5">
+                <div class="img-haggling">
+                    <img src="./fotos-web/Screenshot_15.png" alt="Fondo de youtube para equipo de esports T5">
+                </div>
+                
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+           
             <div>
                 <p class="texto-proyectos"><u>Otro fondo de youtube para el usuario Knox</u> <br>Fecha: 02/09/2019 <br>Autor: Javier Gracián <br>Tecnologías usadas: Photoshop e Illustrator</p>
-                <img src="./fotos-web/knox.png" alt="Fondo de youtube y twitter para Salvador Martínez (Aka knox)">
+                <div class="img-haggling">
+                    <img src="./fotos-web/knox.png" alt="Fondo de youtube y twitter para Salvador Martínez (Aka knox)">
+                </div>
+                
             </div>
+            </div>
+            
            
             
 
@@ -108,9 +142,7 @@ Alumno: Javier Gracián Rodríguez
         
         
 
-    <script>
-        document.getElementById("mensaje").innerHTML = sessionStorage.getItem("usuario");
-    </script>
+    
 </body>
 <footer class="pie-pagina">2021&copy  JaviGracian1998@gmail.com</footer>
 

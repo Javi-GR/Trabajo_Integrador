@@ -17,8 +17,9 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yusei+Magic&display=swap"
     rel="stylesheet">
+    <script src="./desconectar.js"></script>
   <script defer src="scripts.js"></script>
-  <script src="./desconectar.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -33,7 +34,7 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
 
 <body onload="controlar()">
 
-
+  
   <div id="particles-js"></div>
   <script src="particles.js"></script>
   <script src="conf_part.js"></script>
@@ -56,11 +57,13 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
         <li>
           <a href="./inicio.html" class="links-chulos" id="selected">Inicio</a>
         </li>
+        <li><a href="./dolly_zoom.html" class="links-chulos"> Dolly & Ken</a></li>
         <li><a href="./contact.html" class="links-chulos">Contacto</a></li>
         <li><a href="./projects.html" class="links-chulos">Proyectos</a></li>
         <!--Ejercicio login con session storage-->
-        <li><a href="./login.html" class="links-chulos" id="mensajeSesion"></a></li>
-        <div id="mensajeUSR"></div>
+        <li id="ingresar"><a href="./login.html" class="links-chulos" >Login</a></li>
+        <button id="desconectar" onclick="desconectar()">Desconectar</button>
+        
       </ul>
       <div class="burger">
         <div class="linea1"></div>
@@ -118,7 +121,7 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
       </div>
     </div>
 
-
+    
 
     <div class="entradilla">
       <h3>
@@ -132,6 +135,6 @@ Comentarios: faltan breadcrumbs, contador de visitas, overflow en alguna imágen
 </body>
 
 <footer class="pie-pagina">2021&copy JaviGracian1998@gmail.com</footer>
-<script src="./app.js"></script>
+
 
 </html>
