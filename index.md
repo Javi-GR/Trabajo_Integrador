@@ -3,7 +3,7 @@
 ## 23/04/2021
 
 
-<h3>Bienvenido a mi repositorio de GitHub, aqui están los archivos que me han resultado útiles para realizar mi web</h3>
+<h3>Bienvenido a mi repositorio de GitHub, aqui están los archivos que me han resultado útiles para realizar mi proyecto</h3>
 
 <details>
 <summary>Borradores</summary>
@@ -16,7 +16,9 @@
 <summary>Documentos</summary>
  <br>
  <li><a href="./DOCS/RutinaBackupsWEB.pdf">Rutina Backups</a></li>
- <li><a href="#">Todavia por completar</a></li>
+ <li><a href="./DOCS/DiagramaLoginWeb.pdf">Diagrama lógico Login</a></li>
+ <li><a href="./DOCS/1_DAM_Diagrama_Actividades_Javier_Gracian.pdf">Diagrama de actividades del proyecto</a></li> 
+ <li><a href="./DOCS/DollyKen.pdf">Documento explicativo del efecto Dolly y Ken Burns</a></li> 
 </details>
 
 
