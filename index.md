@@ -1,6 +1,6 @@
 # Javier Gracian 
 ## Currículum personal.
-## 23/04/2021
+## 28/05/2021
 
 
 <h3>Bienvenido a mi repositorio de GitHub, aqui están los archivos que me han resultado útiles para realizar mi proyecto</h3>
